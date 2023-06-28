@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="number" />
+  </body>
+  <script>
+    document
+      .getElementById('number')
+      .addEventListener('input', function tkadbrrn() {
+        if (document.getElementById('number').value % 3 == 0) {
+          console.log('박수');
+        } else if (document.getElementById('number').value % 6 == 0) {
+          console.log('박수');
+        } else if (
+          document.getElementById('number').value % 9 == 0 ||
+          document.getElementById('number').value % 3 == 0
+        ) {
+          console.log('박수X2');
+        } else {
+          console.log('통과');
+        }
+      });
+  </script>
+</html>

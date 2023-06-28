@@ -16,9 +16,15 @@
     <div class="black-bg">
       <div class="white-bg">
         <h4>로그인하세요</h4>
-        <button class="btn btn-danger" id="close">닫기</button>
+        <form action="success.html" class="form">
+          <input type="text" id="email" />
+          <input type="password" id="pwd" />
+          <button type="submit" id="send">전송</button>
+          <button type="button" class="btn btn-danger" id="close">닫기</button>
+        </form>
       </div>
     </div>
+
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <span class="navbar-brand">Navbar</span>
@@ -53,5 +59,18 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $('form').on('submit', function () {
+        if (document.getElementById('email').value == '') {
+          alert('아이디 입력해');
+        }
+        if (document.getElementById('pwd').value == '') {
+          alert('비밀번호 입력해');
+        }
+        if (document.getElementById('pwd').value.length < 6) {
+          alert('비밀번호 6자리보다 크게 ㄱㄱ');
+        }
+      });
+    </script>
   </body>
 </html>
